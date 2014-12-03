@@ -23,6 +23,9 @@ extern "C"
 {
 #endif
 
+// Quicksort
+void ccsQuicksort(int *list, int start, int end);
+
 #ifdef __cplusplus
 }
 #endif
