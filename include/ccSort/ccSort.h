@@ -25,7 +25,6 @@ extern "C"
 
 // Quicksort
 void ccsQuicksort(int *list, int start, int end);
-void ccsQuicksortDouble(int *list, int *secondary, int start, int end);
 
 #ifdef __cplusplus
 }
