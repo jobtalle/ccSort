@@ -2,9 +2,9 @@
 
 static void ccsSwap(int *a, int *b)
 {
-	int t = *a;
-	*a = *b;
-	*b = t;
+	*a ^= *b;
+	*b ^= *a;
+	*a ^= *b;
 }
 
 void ccsQuicksort(int *list, int start, int end)
