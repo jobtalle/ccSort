@@ -1,10 +1,12 @@
 #include <ccSort/ccSort.h>
 
-static void ccsSwap(int *a, int *b)
+static void ccsSwap(int *x, int *y)
 {
-	*a ^= *b;
-	*b ^= *a;
-	*a ^= *b;
+	if(x != y) {
+		*x ^= *y;
+		*y ^= *x;
+		*x ^= *y;
+	}
 }
 
 void ccsQuicksort(int *list, int start, int end)
@@ -16,7 +18,7 @@ void ccsQuicksort(int *list, int start, int end)
 
 		while(l < r) {
 			if(list[l] <= pivot) {
-				l++;
+				++l;
 			}
 			else{
 				ccsSwap(&list[l], &list[--r]);
